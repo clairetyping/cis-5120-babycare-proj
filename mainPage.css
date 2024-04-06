@@ -1,0 +1,11 @@
+.center-container {
+  position: relative; 
+  width: 100%; 
+}
+
+.add-button {
+  position: absolute; 
+  left: 50%; 
+  bottom: 10px; 
+  transform: translateX(-50%); 
+}

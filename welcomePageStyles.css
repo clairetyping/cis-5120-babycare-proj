@@ -1,0 +1,52 @@
+.logo-container {
+    position: relative; 
+    text-align: center;
+    max-width:100%; 
+}
+
+.logo-container img {
+    width: 100%; 
+    height: auto; 
+   
+}
+
+.button-container{
+    position: absolute;
+    bottom: 25%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.button-signup, .button-login {
+    padding: 12px 28px; 
+    border-radius: 28px; 
+    font-size: 18px; 
+    border: none; 
+    outline: none; 
+    font-weight: 600; 
+    cursor:pointer;
+    flex:1;
+}
+
+
+
+.button-signup {
+    background-color: #ffffff;
+    color: #6078E0; 
+}
+
+.button-login {
+    background-color: #AFBBEF;
+    color:#ffffff;
+}
+
+.button:hover {
+    opacity: 0.8; 
+}
+
+
