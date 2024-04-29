@@ -1,0 +1,90 @@
+
+.center-container {
+    position: relative; 
+    text-align: center;
+}
+
+
+
+.center-container img {
+    border: 1px solid #6078E0; 
+    box-sizing: border-box; 
+}
+
+
+
+.btn-profile {
+
+    width: 280px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: #F5F6FA; 
+    color: rgba(60, 60, 67, 0.6);
+    padding: 25px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease; 
+}
+
+.btn-profile:hover {
+    background-color: #6078E0; 
+    color: #FFFFFF; 
+    opacity: 1; 
+}
+
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+
+.back-link {
+    position: absolute;
+    top: 10%; 
+    left: 14%; 
+    color: #6078E0; 
+    text-decoration: none;
+    font-size: 13px; 
+    z-index: 10; 
+}
+
+.btn-container{
+    padding: 12px 150px; 
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 28px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#babyGrowth{
+    position: absolute;
+    top: 25%; 
+    left: 50%;
+    transform: translateX(-50%);
+   
+
+}
+
+#babyMilestones{
+    position: absolute;
+    top: 35%; 
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+
+#babyCaregivers{
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translateX(-50%);
+}

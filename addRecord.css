@@ -1,28 +1,68 @@
 .center-container {
-    position: relative; /* This allows absolute positioning relative to this container */
-    text-align: center; /* Center-align the content */
+    position: relative; 
+    text-align: center; 
 }
 
-.image-container {
-    display: inline-block; /* Or 'block' depending on your design */
-    position: relative; /* Relative position for the icon to be absolutely positioned within */
+
+
+.logo-container {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
 }
 
-.button-icon {
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.button-icon-link {
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.button-icon-link img {
+    border: none;
+    outline: none;
+    max-width: 90%;
+    height: auto;
+    width: auto;
+}
+
+
+
+.back-icon {
     position: absolute;
-    bottom: 70px; /* Adjust this value to match where you want the icon */
-    left: 50%; /* Start with 50% to center, then adjust if necessary */
-    transform: translateX(-50%); /* This centers the icon with respect to its width */
-    /* Set the size of the icon if needed */
-    width: 48px;
-    height: 48px;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
-.Diaper-icon-container {
+
+
+.top-row, .bottom-row {
+    display: flex;
     position: absolute;
-    bottom: 26%; /* This will depend on the height of the Bath icon and any spacing */
-    left: 56%; /* This is assuming that the icons are roughly 50% of the width of their container */
-    transform: translate(-50%, 50%); /* Adjusts both horizontally and vertically */
-    width: 180px; /* Set the size of the icon */
-    height: 270px; /* Set the size of the icon */
+    left: 49%;
+    transform: translateX(-50%);
+    width: 20%;
+}
+
+.top-row .button-icon-link, .bottom-row .button-icon-link {
+    margin-right: -20px;
+}
+
+.top-row {
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.bottom-row {
+    top: 70%; 
+    transform: translate(-50%, -50%);
 }

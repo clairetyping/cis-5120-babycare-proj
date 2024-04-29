@@ -3,9 +3,289 @@
   width: 100%; 
 }
 
+.image-container {
+  position: relative;
+}
+
 .add-button {
   position: absolute; 
   left: 50%; 
-  bottom: 10px; 
+  bottom: 1%; 
   transform: translateX(-50%); 
+
+  text-decoration: none; 
+  border: none; 
+  outline: none;
+  display: inline-block;
+  
 }
+
+.add-button img {
+  border: none;
+  outline: none; 
+}
+
+#babyNameDisplay {
+  position:absolute;
+  top:5%;
+  left:26%;
+  font-size: 13px;  
+  font-weight: 600;
+  color: #3C3C43;  
+}
+
+
+
+
+.dates-wrapper {
+  position: absolute; 
+  width: 100%;
+  top: 15%; 
+  text-align: center; 
+}
+
+
+.date-slider-container {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20%; 
+  transform: translate(0, -50%);
+}
+
+  
+
+.dates {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+
+.date {
+  margin: 0 8px; 
+  padding: 9px; 
+  border-radius: 50%; 
+  background-color: transparent; 
+  color: #3C3C43; 
+  transition: background-color 0.3s, color 0.3s; 
+  font-weight: 400; 
+  cursor: pointer; 
+  width: 28px;  
+  height: 28px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+
+.date.today {
+  background-color: #6078E0;
+  color: #FFFFFF;
+}
+
+
+#dateSlider {
+  -webkit-appearance: none; 
+  width: 80%;
+  margin: auto;
+}
+
+
+#dateSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px; 
+  height: 20px;
+  background: #6078E0;
+  cursor: pointer; 
+  border-radius: 50%; 
+  opacity: 0;
+}
+
+#dateSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #6078E0;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+
+
+#todayLabel {
+  position: absolute;
+  top:-21px;
+  left: 50%; 
+  color: #6078E0;
+  font-weight:600;
+  transform: translateX(-50%);
+  display: block;
+}
+
+
+
+.date.selected {
+  background-color: #6078E0; 
+  color: #FFFFFF;
+  border: none;
+}
+
+
+.date:not(.selected) {
+  background-color: transparent; 
+  color: #3C3C43; 
+}
+
+
+.date.default {
+  border: 1px solid #6078E0;
+  background-color: transparent;
+  color: #3C3C43; 
+}
+
+
+
+.date:not(.selected):not(.default) {
+  background-color: transparent;
+  color: #3C3C43;
+}
+
+
+
+/*setting and Me icon*/
+.icon-button img {
+  border: none; 
+}
+
+.settings-button-container,
+.profile-button-container {
+    position: absolute;
+    z-index: 8; 
+}
+
+
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  outline: none; 
+}
+
+
+.settings-button-container {
+  top: 7%; 
+  left: 80%; 
+}
+
+
+
+.profile-button-container {
+  bottom: 5%;
+  left: 70%;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  margin-top: 1px; 
+  z-index: 10; 
+  width: 150px;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+
+
+.settings-button-container .dropdown-menu {
+  right: 0;
+  top: 100%;
+}
+
+
+#defaultActivity {
+  position: absolute; 
+  top:42%;
+  left: 42%;
+  z-index: 2; 
+  width: 296px; 
+  height: auto; 
+  cursor: pointer;
+  border:none;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 10;   
+  background-color: #fefefe; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.modal-content {
+  position: absolute; 
+  left: 40%;
+  transform: translateX(-50%, -50%); 
+  width: auto; 
+  background-color: #F5F6FA;
+  color:#60C8FA;
+  font-size:14px;
+  font-weight:600;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 11;
+  width: 80%; 
+  max-width: 300px; 
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Added Diaper In Main</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="newDiaperInMain.css">
+</head>
+
+
+<body>
+    <div class="center-container">
+        <div class="image-container">
+            <img src="images/newDiaperInMain.svg" alt="New Diaper in Main Header"/>
+            <h1 id="babyNameDisplay"></h1>
+            <a href="addRecord.html" class="add-button">
+                <img src="images/addButton.svg" alt="addbutton", class="button-icon">
+            </a>
+
+
+            <!-- Settings Button -->
+            <div class="settings-button-container">
+                <button id="settingsButton" class="icon-button">
+                    <img src="images/settingIcon.svg" alt="Settings" />
+                </button>
+
+    
+                <div id="settingsMenu" class="dropdown-menu">
+                    <ul>
+                        <li><a href="#">Messages</a></li>
+                        <li><a href="#">Appearance</a></li>
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Me Button -->
+            <div class="profile-button-container">
+                <a href="profilePage.html" class="icon-button">
+                    <img src="images/meIcon.svg" alt="Me" />
+                </a>
+            </div>
+
+        </div>  
+
+        <div class="dates-wrapper">
+            <span id="todayLabel">Today</span>
+            <div class="dates">
+                <span class="date">10</span>
+                <span class="date">11</span>
+                <span class="date">12</span>
+                <span class="date default" data-day="13">13</span>
+                <span class="date">14</span>
+                <span class="date">15</span>
+                <span class="date">16</span>
+            </div>
+        </div>
+
+
+        <div id="feedingDisplay" class="feeding-display">
+            <span id="milkTypeDisplay"></span>
+            <span id="amountDisplay"></span>
+        </div>
+        <img id="btnShowFeeding" src="images/pumpedMilkActivityInSleep.svg" alt="Show Feeding" style="cursor: pointer;" />
+
+        <div id="feedingModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="feedingInfo"></div>
+            </div>
+        </div>
+
+        <div id="sleepTypeDisplay" class="sleep-type-display"></div>
+       
+
+        <img id="btnShowSleep" src="images/napActivityInDiaper.svg" alt="Show sleep" style="cursor: pointer;" />
+
+        <div id="sleepModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="sleepInfo"></div>
+            </div>
+        </div>
+
+        <img id="btnShowDiaper" src="images/pooActivity.svg" alt="Show Diaper" style="cursor: pointer;" />
+        <!-- The Modal -->
+        <div id="diaperModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="diaperInfo"></div>
+            </div>
+        </div>
+
+
+
+        <img id="defaultActivity" src="images/defaulyActivityInNewPage.svg" alt="Show default activity" style="cursor: pointer;" />
+
+
+        <!-- The Modal for Default Activity -->
+        <div id="defaultActivityModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="defaultActivityInfo">
+                <p>Time: 03:30 PM</p>
+                <p>Duration: 23 mins</p>
+                <p>Memo: Normal</p>
+            </div>
+        </div>
+</div>
+    
+    <script src="navigation.js" defer></script>
+    <script src="mainPageSlider.js" defer></script>
+    <script src="newFeedingShown.js" defer></script>
+    <script src="newSleepShown.js" defer></script>
+    <script src="newDiaperShown.js" defer></script>
+
+
+</body>
+</html>

@@ -15,18 +15,15 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     width: 100%;
     max-width: 100%;
     text-align: center; 
+    margin-top:5%;
 }
-
-
 
 /* Common image styles */
 .center-container img {
-    max-width: 100%; 
-    max-height: 100vh; 
+    max-width: 90%; 
     height:auto;
     margin: auto;
     border: 1px solid #6078E0; 

@@ -6,17 +6,78 @@
     <title>Main Page - Baby Care</title>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="mainPage.css">
-    <script src="navagation.js" defer></script>
+   
 </head>
 <body>
     <div class="center-container">
         <div class="image-container">
-            <img src="images/MainPage.svg" alt="Main Page Header"/>
+            <img src="images/mainPage.svg" alt="Main Page Header"/>
+            <h1 id="babyNameDisplay"></h1>
             <a href="addRecord.html" class="add-button">
-                <img src="images/addbutton.svg" alt="addbutton", class="button-icon">
+                <img src="images/addButton.svg" alt="addbutton", class="button-icon">
             </a>
-        </div>   
+
+
+            <!-- Settings Button -->
+            <div class="settings-button-container">
+                <button id="settingsButton" class="icon-button">
+                    <img src="images/settingIcon.svg" alt="Settings" />
+                </button>
+
+    
+                <div id="settingsMenu" class="dropdown-menu">
+                    <ul>
+                        <li><a href="#">Messages</a></li>
+                        <li><a href="#">Appearance</a></li>
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Me Button -->
+            <div class="profile-button-container">
+                <a href="profilePage.html" class="icon-button">
+                    <img src="images/meIcon.svg" alt="Me" />
+                </a>
+            </div>
+
+        </div>  
+
+        <div class="dates-wrapper">
+            <span id="todayLabel">Today</span>
+            <div class="dates">
+                <span class="date">10</span>
+                <span class="date">11</span>
+                <span class="date">12</span>
+                <span class="date default" data-day="13">13</span>
+                <span class="date">14</span>
+                <span class="date">15</span>
+                <span class="date">16</span>
+            </div>
+        </div>
+
+        <img id="defaultActivity" src="images/defaultActivity.svg" alt="Show default activity" style="cursor: pointer;" />
+
+
+        <!-- The Modal for Default Activity -->
+        <div id="defaultActivityModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="defaultActivityInfo">
+                <p>Time: 03:30 PM</p>
+                <p>Duration: 23 mins</p>
+                <p>Memo: Normal</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    
+    <script src="navigation.js" defer></script>
+    <script src="mainPageSlider.js" defer></script>
+
 </body>
 </html>
 

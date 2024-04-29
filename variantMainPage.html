@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variant Main Page - Baby Care</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="variantMainPage.css">
+    
+</head>
+<body>
+    <div class="center-container">
+        <div class="image-container">
+            <div class="tab-container">
+                <button class="tab active" onclick="showTab('activities')">Activities</button>
+                <button class="tab" onclick="showTab('summary')">Summary</button>
+            </div>
+
+            <div id="activities" class="content">
+                <img src="images/activitiesImage.svg" alt="Activities Content">
+            </div>
+
+            <div id="summary" class="content" style="display: none;">
+                <img src="images/summaryImage.svg" alt="Summary Content">
+            </div>
+        </div>
+    </div>
+
+    <script src="tabs.js" defer></script>
+</body>
+</html>

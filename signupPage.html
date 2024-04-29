@@ -6,18 +6,20 @@
     <title>Sign up - Baby Care</title>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="signupPageStyles.css">
-    <script src="navagation.js" defer></script>
+    
  
 
 </head>
 <body>
     <div class="center-container">
-        <img src="images/signupPage.svg" alt="Baby Care Signup">
+        <div class="logo-container">
+            <img src="images/signupPage.svg" alt="Baby Care Signup">
+        </div>
 
         <form class="signup-form">
-            <input type="email" id="email" name="email" placeholder="Email Address" required>
-        <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required autocomplete="off">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
         </form>
 
         <p class="login-prompt">Already have a Tapper account? <a href="loginPage.html" class="login-link">Log in</a></p>
@@ -27,7 +29,7 @@
         
     </div>
 
-   
+    <script src="navigation.js" defer></script>
 
 </body>
 </html>

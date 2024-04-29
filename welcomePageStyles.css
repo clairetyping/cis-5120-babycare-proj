@@ -15,7 +15,7 @@
     bottom: 25%; 
     left: 50%;
     transform: translateX(-50%);
-    width: 90%; 
+    width: 80%; 
     display: flex;
     align-items: center;
     gap: 20px;
@@ -23,7 +23,9 @@
 
 
 .button-signup, .button-login {
-    padding: 12px 28px; 
+    background-color: #ffffff;
+    color: #6078E0;
+    padding: 8px 16px; 
     border-radius: 28px; 
     font-size: 18px; 
     border: none; 
@@ -34,19 +36,9 @@
 }
 
 
-
-.button-signup {
-    background-color: #ffffff;
-    color: #6078E0; 
-}
-
-.button-login {
-    background-color: #AFBBEF;
-    color:#ffffff;
-}
-
-.button:hover {
-    opacity: 0.8; 
+.button-signup:hover, .button-login:hover {
+    background-color: rgba(235, 238, 251, 0.8);
+    color: #ffffff; 
 }
 
 

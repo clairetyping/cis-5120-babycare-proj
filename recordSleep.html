@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep record - Baby Care</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="recordSleepStyle.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+</head>
+
+<body>
+    
+    <div class="center-container">
+        <div class="image-container">
+            <a href="addRecord.html" class="back-link">← Back</a>
+            <img src="images/recordSleep.svg" alt="Record Sleep Header"/>
+
+            <div class="date-picker-container">
+                <input type="text" id="fromPicker" class="datetime-picker from-picker" placeholder="from">
+                <input type="text" id="toPicker" class="datetime-picker to-picker" placeholder="to">
+            </div>
+
+            <div class="memo-section">
+                <textarea placeholder="How's the baby's sleep?" id="memo-input"></textarea>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="button active" id="nightButton">Night</button>
+            <button class="button" id="dayButton">Day</button>
+        </div>
+
+       
+        <div class="btn-container">
+            <button class="btn-confirm" id="confirmSleepButton">CONFIRM</button>
+        </div>
+
+        <div class="btn-container-delete">
+            <button class="btn-delete" id="deleteButton">DELETE</button>
+        </div>
+    </div>
+
+
+     
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    
+    <script>
+        // Initialize Flatpickr for the date-time picker inputs
+        flatpickr("#fromPicker", {
+          enableTime: true,
+          dateFormat: "d M Y H:i K",
+          altInput: true,
+          altFormat: "j M Y h:i K",
+          time_24hr: false
+        });
+        
+        flatpickr("#toPicker", {
+          enableTime: true,
+          dateFormat: "d M Y H:i K",
+          altInput: true,
+          altFormat: "j M Y h:i K",
+          time_24hr: false
+        });
+      </script> 
+
+    <script src="sleepRecordHandler.js" defer></script>
+
+    <script src="navigation.js" defer></script>
+    <script src="sleepButtonToggle.js" defer></script>   
+</body>
+</html>

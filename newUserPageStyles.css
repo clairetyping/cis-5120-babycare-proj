@@ -11,30 +11,30 @@
     box-sizing: border-box; 
 }
 
-.btn-container {
-    position: absolute;
-    bottom: 50%; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto; 
-}
+
 
 .btn-newUser {
-    background-color: #6078E0;
-    color: white;
-    padding: 30px 45px; 
-    font-size: 15px;
+
+    width: 280px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: #F5F6FA; 
+    color: rgba(60, 60, 67, 0.6);
+    padding: 25px 40px;
+    font-size: 14px;
     font-weight: 600;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     outline: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease; 
 }
 
-
 .btn-newUser:hover {
-    background-color: #5068c0; 
+    background-color: #6078E0; 
+    color: #FFFFFF; 
+    opacity: 1; 
 }
 
 
@@ -46,10 +46,39 @@
 
 .back-link {
     position: absolute;
-    top: 60px; 
-    left: 20px; 
+    top: 10%; 
+    left: 14%; 
     color: #6078E0; 
     text-decoration: none;
     font-size: 13px; 
     z-index: 10; 
+}
+
+.btn-container{
+    padding: 12px 150px; 
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 28px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newFamilyButton{
+    position: absolute;
+    bottom: 50%; 
+    left: 50%;
+    transform: translateX(-50%);
+   
+
+}
+
+#existingFamilyButton{
+    position: absolute;
+    bottom: 35%; 
+    left: 50%;
+    transform: translateX(-50%);
+   
+
 }

@@ -6,26 +6,56 @@
     <title>Sign up - Baby Care</title>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="registerUserPageStyles.css">
-    <script src="navagation.js" defer></script>
- 
-
+    
 </head>
 <body>
     <div class="center-container">
-
         <div class="image-container">
             <a href="newUserPage.html" class="back-link">← Back</a>
             <img src="images/registerUserPage.svg" alt="Baby Care register user">
+            <button class="photo-upload-btn" id="photoButton" type="button">+ <br> Baby's Photo</button>
+            <div id="preview" class="photo-preview"></div> 
+            <input type="file" id="photoUpload" name="babyPhoto" style="display: none;">
         </div>
 
-        <div class="btn-container">
-            <button class="btn-confirm" id="confirmButton">CONFIRM</button>
-        </div>
-        
+        <form class="registration-form">
+            <div class="input-container">
+                <input type="text" id="babyName" name="babyName" placeholder="Baby’s Name" required autocomplete="off">
+            </div>
+            <div class="gender-select">
+                <button type="button" id="boyButton" class="gender-btn">Boy</button>
+                <button type="button" id="girlButton" class="gender-btn">Girl</button>
+            </div>
+
+            <div class="date-weight-container">
+                <input type="date" id="birthDate" name="birthDate">
+                <input type="text" id="birthWeight" name="birthWeight" placeholder="Birth Weight" autocomplete="off">
+            </div>
+
+            <button class="btn-confirm" id="confirmButton" type="submit">CONFIRM</button>
+        </form>      
     </div>
 
-   
+    <script src="navigation.js" defer></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.registration-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+        
+                const babyName = document.getElementById('babyName').value;
+                if (babyName) {
+                    localStorage.setItem('babyName', babyName); 
+                    console.log('Saved name:', babyName); 
+                    window.location.href = 'mainPage.html'; 
+                } else {
+                    console.log('No name entered'); 
+                }
+            });
+        });
+    </script>
+        
 </body>
 </html>
 

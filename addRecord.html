@@ -3,24 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page - Baby Care</title>
+    <title>Add Record Page - Baby Care</title>
     <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="addRecord.css"> <!-- Ensure you have addRecord.css -->
-    <script src="navagation.js" defer></script>
+    <link rel="stylesheet" href="addRecord.css"> 
+    
 </head>
 <body>
     <div class="center-container">
+        <div class="logo-container">
+            <img src="images/recordActivity.svg" alt="Add Record Header"/>
+        </div>
+
         <div class="image-container">
-            <img src="images/Record.svg" alt="Add Record Header"/>
-            <!-- The anchor tag now wraps the image, making it clickable -->
-            <a href="mainPage.html" class="button-icon-link">
-                <img src="images/Vector.svg" alt="confirmButton" class="button-icon"/>
+            <a href="mainPage.html" class="button-icon-link back-icon">
+                <img src="images/backToLastPageIcon.svg" alt="Back to Last Page" />
             </a>
+
+            
+            <div class="top-row">
+                <a href="recordFeeding.html" class="button-icon-link feeding-icon">
+                    <img src="images/feedingActivity.svg" alt="Feeding Activity Icon" />
+                </a>
+                <a href="recordSleep.html" class="button-icon-link sleeping-icon">
+                    <img src="images/sleepingActivity.svg" alt="Sleeping Activity Icon" />
+                </a>
+            </div>
+        
+                
+            <div class="bottom-row">
+                <div class="button-icon-link bath-icon">
+                    <img src="images/bathActivity.svg" alt="Bath Activity Icon" />
+                </div>
+                <a href="recordDiaper.html" class="button-icon-link diaper-icon">
+                    <img src="images/diaperActivity.svg" alt="Diaper Icon" />
+                </a>
+            </div>
         </div>
-        <div class="Diaper-icon-container">
-            <a href="recordDiaper.html" class="button-icon-link">
-            <img src="images/diaperIcon.svg" alt="diaperIcon" class="diaper-icon"/>
-        </div>
+        
     </div>
+
+    <script src="navigation.js" defer></script>
 </body>
 </html>

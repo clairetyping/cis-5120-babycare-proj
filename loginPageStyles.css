@@ -4,16 +4,21 @@
     text-align: center;
 }
 
-
-
-.center-container img {
-    border: 1px solid #6078E0; 
-    box-sizing: border-box; 
+.logo-container {
+    position: relative; 
+    text-align: center;
+    max-width: 100%; 
 }
+
+.logo-container img {
+    width: 100%; 
+    height: auto; 
+}
+
 
 .btn-container {
     position: absolute;
-    bottom: 40%; 
+    bottom: 35%; 
     left: 50%;
     transform: translateX(-50%);
     width: auto; 
@@ -23,7 +28,7 @@
 .btn-login {
     background-color: #6078E0;
     color: white;
-    padding: 12px 90px; 
+    padding: 12px 120px; 
     font-size: 15px;
     font-weight: 600;
     border: none;
@@ -57,7 +62,7 @@
 
 .login-form {
     width: 100%;
-    max-width: 280px; 
+    max-width: 290px; 
     margin: auto;
     margin-top: -200px; 
     margin-bottom: 20px;

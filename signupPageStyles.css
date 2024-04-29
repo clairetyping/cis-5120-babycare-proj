@@ -6,10 +6,6 @@
 
 
 
-.center-container img {
-    border: 1px solid #6078E0; 
-    box-sizing: border-box; 
-}
 
 .btn-container {
     position: absolute;
@@ -19,11 +15,22 @@
     width: auto; 
 }
 
+.logo-container {
+    position: relative; 
+    text-align: center;
+}
+
+.logo-container img {
+    width: 100%; 
+    height: auto; 
+   
+}
+
 
 .btn-signup {
     background-color: #6078E0;
     color: white;
-    padding: 10px 85px; 
+    padding: 12px 90px; 
     font-size: 15px;
     font-weight: 600;
     border: none;
@@ -40,7 +47,7 @@
 
 
 .login-prompt {
-    font-size: 13px; 
+    font-size: 14px; 
     color: #3C3C43; 
     position: absolute; 
     top: 15%; 

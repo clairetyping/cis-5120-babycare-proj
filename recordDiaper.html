@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page - Baby Care</title>
+    <title>Diaper record - Baby Care</title>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="recordDiaper.css">
-    <script src="navagation.js" defer></script>
-    <script src="recordDiaper.js" defer></script>
+    
+    
 </head>
 <body>
     <div class="center-container">
         <div class="image-container">
-            <img src="images/RecordDiaper.svg" alt="Record Diaper Header"/>
+            <a href="addRecord.html" class="back-link">← Back</a>
+            <img src="images/recordDiaper.svg" alt="Record Diaper Header"/>
         </div>
 
         <div class="button-group">
-            <button class="button">Poo</button>
-            <button class="button">Pee</button>
-            <button class="button">Both</button>
+            <button class="button" id="pooButton">Poo</button>
+            <button class="button" id="peeButton">Pee</button>
+            <button class="button" id="bothButton">Both</button>
         </div>
+        
 
-        <div class="upload-container">
-            <label for="file-upload" class="custom-file-upload">
-                <i class="fa fa-cloud-upload"></i> Add Photo +
-            </label>
-            <input id="file-upload" type="file" style="display:none;" onchange="previewImage(event)" />
-        </div>
-        <div id="preview"></div>
-
+        <div class="custom-upload-btn">+ Add Photo</div>
+        <input type="file" id="file-upload" style="display: none;" />
+        <div id="diaperPreview"></div>
 
         <div class="memo-section">
             <textarea placeholder="What's the color, smell...?" id="memo-input"></textarea>
         </div>
 
         <div class="btn-container">
-            <href="newAddedDiaper.html"></a>
             <button class="btn-confirm" id="confirmDiaperButton">CONFIRM</button>
         </div>
 
         <div class="btn-container-delete">
             <button class="btn-delete" id="deleteButton">DELETE</button>
         </div>
-
     </div>
+
+    <script src="navigation.js" defer></script>
+    <script src="diaperRecordHandler.js" defer></script>
+
 </body>
 </html>
