@@ -48,9 +48,9 @@
 .top-row, .bottom-row {
     display: flex;
     position: absolute;
-    left: 49%;
+    left: 49.5%;
     transform: translateX(-50%);
-    width: 20%;
+    width: 22%;
 }
 
 .top-row .button-icon-link, .bottom-row .button-icon-link {
