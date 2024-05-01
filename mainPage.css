@@ -246,7 +246,7 @@
   display: none; 
   position: fixed; 
   z-index: 10;   
-  background-color: #fefefe; 
+  background-color: rgba(0, 0, 0, 0.6); 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 8px; 
   top: 0;
@@ -257,8 +257,10 @@
 
 
 .modal-content {
+  background-image: url('images/modalBackground.svg');
   position: absolute; 
-  left: 40%;
+  left: 39%;
+  top:12%;
   transform: translateX(-50%, -50%); 
   width: auto; 
   background-color: #F5F6FA;
