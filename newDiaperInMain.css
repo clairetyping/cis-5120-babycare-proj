@@ -386,3 +386,21 @@
     border:none;
 }
   
+
+
+.diaper-display {
+    position:absolute;
+    bottom: 19%; 
+    left:51%;
+    transform: translateX(-50%); 
+    z-index: 3; 
+    color: #3C3C43; 
+    font-weight: 600;
+    text-align: center; 
+}
+
+
+#diaperTypeDisplay {
+    font-size:14px;
+    margin-right: 20px;
+}
