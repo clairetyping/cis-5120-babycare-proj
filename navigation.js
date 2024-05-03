@@ -142,24 +142,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var defaultActivityModal = document.getElementById("defaultActivityModal");
     var btnDefaultActivity = document.getElementById("defaultActivity");
-    var spanClose = defaultActivityModal.getElementsByClassName("close")[0];
-
+    /*var spanClose = defaultActivityModal.getElementsByClassName("close")[0];*/
+    var spanClose = defaultActivityModal ? defaultActivityModal.getElementsByClassName("close")[0] : null;
     
-    btnDefaultActivity.onclick = function() {
-        defaultActivityModal.style.display = "block";
-    };
 
-   
-    spanClose.onclick = function() {
-        defaultActivityModal.style.display = "none";
-    };
+    if (defaultActivityModal && btnDefaultActivity && spanClose) {
+        btnDefaultActivity.onclick = function() {
+            defaultActivityModal.style.display = "block";
+        };
 
-   
-    window.onclick = function(event) {
-        if (event.target === defaultActivityModal) {
+        spanClose.onclick = function() {
             defaultActivityModal.style.display = "none";
-        }
-    };
+        };
+
+        window.onclick = function(event) {
+            if (event.target === defaultActivityModal) {
+                defaultActivityModal.style.display = "none";
+            }
+        };
+    }
    
 });
 

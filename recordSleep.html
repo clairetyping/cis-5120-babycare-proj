@@ -20,8 +20,8 @@
             <img src="images/recordSleep.svg" alt="Record Sleep Header"/>
 
             <div class="date-picker-container">
-                <input type="text" id="fromPicker" class="datetime-picker from-picker" placeholder="from">
-                <input type="text" id="toPicker" class="datetime-picker to-picker" placeholder="to">
+                <input type="text" id="fromPicker"  name="fromPicker" class="datetime-picker from-picker" placeholder="from">
+                <input type="text" id="toPicker" name="toPicker" class="datetime-picker to-picker" placeholder="to">
             </div>
 
             <div class="memo-section">
@@ -47,26 +47,48 @@
 
      
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
     
     <script>
-        // Initialize Flatpickr for the date-time picker inputs
-        flatpickr("#fromPicker", {
-          enableTime: true,
-          dateFormat: "d M Y H:i K",
-          altInput: true,
-          altFormat: "j M Y h:i K",
-          time_24hr: false
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr("#fromPicker", {
+                enableTime: true,
+                dateFormat: "d M Y H:i K",
+                altInput: true,
+                altFormat: "j M Y h:i K",
+                time_24hr: false,
+                onReady: function(selectedDates, dateStr, instance) {
+                   
+                    instance.calendarContainer.querySelector(".flatpickr-monthDropdown-months").id = "fromMonth";
+                    instance.calendarContainer.querySelector(".flatpickr-monthDropdown-months").name = "fromMonth";
+                    instance.calendarContainer.querySelector(".numInput.cur-year").id = "fromYear";
+                    instance.calendarContainer.querySelector(".numInput.cur-year").name = "fromYear";
+                    instance.calendarContainer.querySelector(".flatpickr-hour").id = "fromHour";
+                    instance.calendarContainer.querySelector(".flatpickr-hour").name = "fromHour";
+                    instance.calendarContainer.querySelector(".flatpickr-minute").id = "fromMinute";
+                    instance.calendarContainer.querySelector(".flatpickr-minute").name = "fromMinute";
+                }
+            });
+
+            flatpickr("#toPicker", {
+                enableTime: true,
+                dateFormat: "d M Y H:i K",
+                altInput: true,
+                altFormat: "j M Y h:i K",
+                time_24hr: false,
+                onReady: function(selectedDates, dateStr, instance) {
+                    instance.calendarContainer.querySelector(".flatpickr-monthDropdown-months").id = "toMonth";
+                    instance.calendarContainer.querySelector(".flatpickr-monthDropdown-months").name = "toMonth";
+                    instance.calendarContainer.querySelector(".numInput.cur-year").id = "toYear";
+                    instance.calendarContainer.querySelector(".numInput.cur-year").name = "toYear";
+                    instance.calendarContainer.querySelector(".flatpickr-hour").id = "toHour";
+                    instance.calendarContainer.querySelector(".flatpickr-hour").name = "toHour";
+                    instance.calendarContainer.querySelector(".flatpickr-minute").id = "toMinute";
+                    instance.calendarContainer.querySelector(".flatpickr-minute").name = "toMinute";
+                }
+            });
         });
-        
-        flatpickr("#toPicker", {
-          enableTime: true,
-          dateFormat: "d M Y H:i K",
-          altInput: true,
-          altFormat: "j M Y h:i K",
-          time_24hr: false
-        });
-      </script> 
+    </script>
+    
 
     <script src="sleepRecordHandler.js" defer></script>
 
